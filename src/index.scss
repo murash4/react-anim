@@ -32,7 +32,6 @@ code {
   align-items: center;
   width: 200px;
   height: 200px;
-  animation: square 1s ease-out forwards;
 
   &.blue {
     background-color: cornflowerblue;
@@ -40,6 +39,19 @@ code {
 
   &.orange {
     background-color: coral;
+  }
+
+  &.entering {
+    animation: square 1s ease-out forwards;
+  }
+
+  &.exiting {
+    animation: square 0.5s ease-out alternate-reverse;
+  }
+
+  &.exited {
+    opacity: 0;
+    transform: translateY(-100px);
   }
 }
 
